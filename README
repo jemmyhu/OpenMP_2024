@@ -1,0 +1,35 @@
+//Jemmy Hu, June 11, 2024
+
+# When login to Magic Castle using the username and password asigned to you
+
+ ssh userxxxx@coss-b.c3.ca
+ or
+ ssh userxxxx@coss-a.c3.ca
+
+# select cpus(threads) to be 4 for interactive run
+
+[ ...$] export OMP_NUM_THREADS=4
+
+# use StdEnv/2023
+[ ...$] module load StdEnv/2023
+
+# copy files from my directory
+ cp -rf /home/user0009/OpenMP_2024 .
+
+# use newer compiler in StdEnv/2023
+[ ...$] module load StdEnv/2023
+
+# compile
+
+ gcc –fopenmp –o hellow_omp hellow_omp.c
+	
+ gfortran –fopenmp –o hellow_omp hellow_omp.f90
+
+# interactive run
+
+ ./hellow_omp
+
+# on the cluster ,slurm submit as a job
+# not on Magic Castle
+ satch hellow_omp.sh
+
