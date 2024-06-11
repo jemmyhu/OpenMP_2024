@@ -30,6 +30,6 @@
  ./hellow_omp
 
 # on the cluster ,slurm submit as a job
-# not on Magic Castle
+
  satch hellow_omp.sh
 
