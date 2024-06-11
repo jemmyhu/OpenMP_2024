@@ -1,7 +1,10 @@
 //Jemmy Hu, June 11, 2024
 
-# for interactive run, setup cpus/threads to be 4, type
+# for interactive run on the login node, setup cpus/threads to be 4, type
 [ ...$] export OMP_NUM_THREADS=4
+
+# use StdEnv/2023
+[ ...$] module load StdEnv/2023
 
 # compile
  gcc –fopenmp –o hellow_omp hellow_omp.c
@@ -11,6 +14,7 @@
 # interactive run
  ./hellow_omp
 
-# slurm submit as a job (on cluster only, not on Magic Castle account)
+# slurm submit as a job 
+
  sbatch hellow_omp.sh
 
