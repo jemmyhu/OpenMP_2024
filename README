@@ -27,3 +27,5 @@
 
  satch hellow_omp.sh
 
+# get files from github
+git clone https://github.com/jemmyhu/OpenMP_2024.git
