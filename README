@@ -6,15 +6,9 @@
  or
  ssh userxxxx@coss-a.c3.ca
 
-# select cpus(threads) to be 4 for interactive run
+# select cpus(threads) to be 4 on the login node for interactive run
 
 [ ...$] export OMP_NUM_THREADS=4
-
-# use StdEnv/2023
-[ ...$] module load StdEnv/2023
-
-# copy files from my directory
- cp -rf /home/user0009/OpenMP_2024 .
 
 # use newer compiler in StdEnv/2023
 [ ...$] module load StdEnv/2023
@@ -29,7 +23,7 @@
 
  ./hellow_omp
 
-# on the cluster ,slurm submit as a job
+# submit job to slurm queue
 
  satch hellow_omp.sh
 
